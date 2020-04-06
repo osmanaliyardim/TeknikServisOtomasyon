@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F279163A-0178-4535-9FF1-12707813DADA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TeknikServis</RootNamespace>
+    <AssemblyName>TeknikServis</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArizaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArizaDetay.Designer.cs">
+      <DependentUpon>FrmArizaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArizaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArizaListesi.Designer.cs">
+      <DependentUpon>FrmArizaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArizaliUrunDetayListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArizaliUrunDetayListesi.Designer.cs">
+      <DependentUpon>FrmArizaliUrunDetayListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArizaliUrunKaydi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArizaliUrunKaydi.Designer.cs">
+      <DependentUpon>FrmArizaliUrunKaydi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCariEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCariEkle.Designer.cs">
+      <DependentUpon>FrmCariEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCariListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCariListesi.Designer.cs">
+      <DependentUpon>FrmCariListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCariSehirler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCariSehirler.Designer.cs">
+      <DependentUpon>FrmCariSehirler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDepartman.Designer.cs">
+      <DependentUpon>FrmDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDovizKurlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDovizKurlari.Designer.cs">
+      <DependentUpon>FrmDovizKurlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFaturaKalem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFaturaKalem.Designer.cs">
+      <DependentUpon>FrmFaturaKalem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFaturaKalemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFaturaKalemleri.Designer.cs">
+      <DependentUpon>FrmFaturaKalemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFaturaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFaturaListesi.Designer.cs">
+      <DependentUpon>FrmFaturaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmIstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmIstatistik.Designer.cs">
+      <DependentUpon>FrmIstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmKategori.Designer.cs">
+      <DependentUpon>FrmKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMarkalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMarkalar.Designer.cs">
+      <DependentUpon>FrmMarkalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNotlar.Designer.cs">
+      <DependentUpon>FrmNotlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPersonel.Designer.cs">
+      <DependentUpon>FrmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQRCode.Designer.cs">
+      <DependentUpon>FrmQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSatislar.Designer.cs">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUrunListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUrunListesi.Designer.cs">
+      <DependentUpon>FrmUrunListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUrunSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUrunSatis.Designer.cs">
+      <DependentUpon>FrmUrunSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYeniDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYeniDepartman.Designer.cs">
+      <DependentUpon>FrmYeniDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYeniKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYeniKategori.Designer.cs">
+      <DependentUpon>FrmYeniKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYeniUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYeniUrun.Designer.cs">
+      <DependentUpon>FrmYeniUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYoutube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYoutube.Designer.cs">
+      <DependentUpon>FrmYoutube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLADMIN.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLARIZADETAY.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLCARI.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLDEPARTMAN.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLFATURABILGI.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLFATURADETAY.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLKATEGORI.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLNOTLARIM.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLPERSONEL.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLURUN.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLURUNHAREKET.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLURUNKABUL.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLURUNTAKIP.cs">
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikServisModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeknikServisModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikServisModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeknikServisModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikServisModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArizaDetay.resx">
+      <DependentUpon>FrmArizaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArizaListesi.resx">
+      <DependentUpon>FrmArizaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArizaliUrunDetayListesi.resx">
+      <DependentUpon>FrmArizaliUrunDetayListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArizaliUrunKaydi.resx">
+      <DependentUpon>FrmArizaliUrunKaydi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCariEkle.resx">
+      <DependentUpon>FrmCariEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCariListesi.resx">
+      <DependentUpon>FrmCariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCariSehirler.resx">
+      <DependentUpon>FrmCariSehirler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDepartman.resx">
+      <DependentUpon>FrmDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDovizKurlari.resx">
+      <DependentUpon>FrmDovizKurlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFaturaKalem.resx">
+      <DependentUpon>FrmFaturaKalem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFaturaKalemleri.resx">
+      <DependentUpon>FrmFaturaKalemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFaturaListesi.resx">
+      <DependentUpon>FrmFaturaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmIstatistik.resx">
+      <DependentUpon>FrmIstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmKategori.resx">
+      <DependentUpon>FrmKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMarkalar.resx">
+      <DependentUpon>FrmMarkalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNotlar.resx">
+      <DependentUpon>FrmNotlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPersonel.resx">
+      <DependentUpon>FrmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQRCode.resx">
+      <DependentUpon>FrmQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSatislar.resx">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUrunListesi.resx">
+      <DependentUpon>FrmUrunListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUrunSatis.resx">
+      <DependentUpon>FrmUrunSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYeniDepartman.resx">
+      <DependentUpon>FrmYeniDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYeniKategori.resx">
+      <DependentUpon>FrmYeniKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYeniUrun.resx">
+      <DependentUpon>FrmYeniUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYoutube.resx">
+      <DependentUpon>FrmYoutube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="TeknikServisModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TeknikServisModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TeknikServisModel.edmx.diagram">
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TeknikServisModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
+      <LastGenOutput>TeknikServisModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TeknikServisModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
+      <LastGenOutput>TeknikServisModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
